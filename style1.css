@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+.flexbox{
+	background-color: grey;
+	display: flex;
+	flex-flow: wrap; /* gir den lov til at lave mere end en række*/
+	flex-direction: column; /*hvis man gerne vil havde det i kolonner*/
+}
+.flexbox p{
+	background-color: white;
+	margin: 10px;
+	padding: 10px;
+	width: 250px;
+	flex-grow: 1;
+}
+.grid{
+	background-color: black;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 200px 200px;
+	gap: 10px 30px;
+		
+}
+.grid p{
+	background-color: white;
+	padding: 20px;
+	border: 1px solid red;
+	text-align: center;
+}
+
+.item1{
+	grid-column: 1/ span 2; /* start kolonne og slut kolonne*/
+	grid-row: 1/3; /* start række og slut række*/
+}

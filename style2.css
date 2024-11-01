@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+}
+nav{
+	background-color: #B8AE5C;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 75px;
+	align-items: center;
+}
+.menu{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+
+.menu li {
+	color: white;
+	padding: 15px;
+	
+}
+
+.menu-box{
+	display:none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 100%;
+}
+
+.menu-icon, .menu-icon::before, .menu-icon::after{ /* selve stregerne til "burgermenuen"*/
+	display: block;
+	background-color: white;
+	height: 6px;
+	width: 30px;
+	position: absolute;
+	border-radius: 10px; /* afrunder hjørnerne*/
+	transition: transform 10ms;
+	
+}
+.menu-icon::before{
+	content:"";
+	margin-top: -8px;
+}
+.menu-icon::after{
+	content:"";
+	margin-top: 8px;
+}
+
+#menu-activate:checked + .menu-box .menu-icon::before{
+	margin-top: 0;
+	transform: rotate(45deg);
+	
+}
+
+#menu-activate:checked + .menu-box .menu-icon::after{
+	margin-top: 0;
+	transform: rotate(-45deg);
+	
+}
+
+#menu-activate:checked + .menu-box .menu-icon{
+	background-color: rgba(0,0,0,0);
+	
+}
+#menu-activate{
+	display: none;
+}
+
+@media screen and (max-width: 700px){
+	.menu-box{
+		display:flex;
+	}
+	.menu{
+		position: absolute;
+		top:0;
+		right: 0;
+		margin-top: 75px;
+		background-color:#756E33;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	#menu-activate ~ .menu li{
+		height: 0;
+		margin: 0;
+		padding: 0;
+		transition: height 1s;
+		
+	}
+	#menu-activate:checked ~ .menu li{
+		height: 50px;
+		padding: 10px;
+		transition: height 1s;
+	}
+}

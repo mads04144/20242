@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	color: #100DAF; /* Blå farve */
+	position: sticky;
+	left: 50px;
+	font-family: "ff-brokenscript-web", serif;
+font-weight: 700;
+font-style: normal;
+font-size: 20px;
+}
+
+p{
+	display: inline-block; /* inline gør så det kun fylder det teksten fylder, men inline block gør så der kan være plads til mere*/
+	height: 50px;
+	width: 150px;
+	color: yellow; /* gul*/
+	border: medium dotted red; /* Den her overruler universal (*) men kun for brødteksten P*/
+	padding: 10px 10px;
+	margin: 20px 10px;
+}
+.baggrund{
+	background: black; /* . i starten definerer vores class fra HTML*/
+	border-style: none; /* grunden til en af vores tekstbokse ikke har en border/*
+}
+		
+*{
+	border: 1px solid black; /* stjernen definerer den er unviversal og styler alt */
+}
+
+.baggrund:hover{
+	background-color: white;
+	cursor: pointer;
+}
+div{
+	/* background-image: url("img/nerd.jpg"); /* bruger bare mit nerd billed*/
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover; /* dækker hele div*/
+	/*background-size: 500px;
+	opacity: 0.5;
+	width: 100%; /* stretcher den ud, den fylder ikke div fordi pixels på size er for lav*/
+	
+} 
+.animation{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	animation-name: example;
+	animation-duration: 5s;
+	animation-delay: 5s;
+	animation-iteration-count: infinite; /* hvor mange gange animation kører*/
+	animation-direction: alternate-reverse; 
+	animation-timing-function: linear; /* måden den "flyder" på*/
+}
+@keyframes example{
+	0% {background-color: red; top: 0px; left: 0px;}
+	25% {background-color: blue; top: 0px; left: 250px;}
+	50% {background-color: blue; top: 100px; left: 250px; scale: 2;}
+	75% {background-color: blue; top: 100px; left: 0px; scale: 2;}
+	100% {background-color: red; top: 0px; left: 0px; scale: 1;}
+	
+} 
+.responsive{
+	width: 75%;
+	min-width: 100px;
+	max-width: 1000px;
+	height: 100px;
+	background-color: red;
+	
+}
+
+@media screen and (max-width:800px){
+	.responsive{
+		background-color: blue;
+	}
+}
