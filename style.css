@@ -3,12 +3,13 @@
 
 h1 {
 	color: #100DAF; /* Blå farve */
-	position: sticky;
+	position: absolute;
 	left: 50px;
 	font-family: "ff-brokenscript-web", serif;
 font-weight: 700;
 font-style: normal;
 font-size: 20px;
+top: 100px
 }
 
 p{
