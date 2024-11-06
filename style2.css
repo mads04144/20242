@@ -105,12 +105,55 @@ nav{
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
-		position: relative;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-position: center;
+	align-items: center;
+	align-content: center;
+}
+iframe{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+}
+.achievementbackgroundpicture{
+	background-image: url("img/uldum.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
 	display: flex;
 	background-position: center;
 	align-items: center;
 	align-content: center;
 }
+.projectbackgroundpicture{
+background-image: url("img/durotar.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-position: center;
+	align-items: center;
+	align-content: center;
+}
+.contactbackgroundpicture{
+	background-image: url("img/meingame.png");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-position: center;
+	align-items: center;
+	align-content: center;
+}
+
 h1 {
 font-family: "ff-brokenscript-web", serif;
 font-weight: 700;
@@ -132,8 +175,8 @@ position: absolute;
 left: 30%;
 top: 70px;
 }
-.descriptiontext{
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+#descriptiontext{
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	color: white;
 	background: none;
 	text-align: center;
@@ -146,11 +189,51 @@ top: 70px;
 	
 }
 
-@media screen and (max-width: 700px) {
+#listitems{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color: white;
+	position: absolute;
+	left: 0;
+	font-size: 20px;
+}
+
+#listitems a:hover{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color:#0066CC /* the actual color code for links */
+}
+#listitems a{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color: white;
+}
+
+.leftdescripitiontitle{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color:white;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	
+}
+.myimage{
+	position: absolute;
+	right:0;
+	bottom: 0;
+}
+
+
+
+/*@media screen and (max-width: 700px) {
     .mainsbackgroundpicture {
         height: 100vh;
     }
-	.descriptiontext{
+	#descriptiontext{
+		font-size: 20px;
+		max-width: 600px;
+		text-align: center;
+		position: absolute;
+		display: flex;
+	}
+	#descriptivetitel{
 		font-size: 20px;
 		max-width: 600px;
 		text-align: center;
